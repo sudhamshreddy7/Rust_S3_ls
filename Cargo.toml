@@ -1,0 +1,11 @@
+[package]
+name = "Rust_S3_ls"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aws-sdk-s3 = "0.5"
+aws-config = "0.5"
+tokio = { version = "1", features = ["full"] }
+features = "0.10.0"
+futures = "0.3.31"
