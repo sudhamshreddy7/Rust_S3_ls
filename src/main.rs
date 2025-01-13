@@ -7,7 +7,16 @@ use std::rc::Rc;
 
 fn help(){
     // rusty_s3_ls --r <region> --b <bucket_name>
-
+    println!("  RRR   U   U  SSS  TTTTT ");
+    println!(" R   R  U   U S       T   ");
+    println!(" RRRR   U   U  SSS    T   ");
+    println!(" R  R   U   U     S   T   ");
+    println!(" R   R  UUUUU  SSS    T   ");
+    println!("usage: rusty_s3_ls [OPERATION] 🦀");
+    println!();
+    println!("OPERATION can be one of the following:");
+    println!("rusty_s3_ls --r <region> --b <bucket_name>");
+    println!("for help\n rusty_s3_ls --h");
 }
 fn invalid(){
     println!("Invalid commands\nplease follow below format:");
@@ -26,6 +35,10 @@ async fn main() -> Result<(), Error> {
     // Specify the bucket name
     // let bucket_name = "input-bucket-code-editor";
     let args: Vec<String> = env::args().collect();
+    if args.len()==2 && args[1]=="--h"{
+        help();
+        return Ok(());
+    }
     if args.len()!=5 || args[1]!="--r" || args[3]!="--b" {
         invalid();
         return Ok(());
