@@ -12,6 +12,7 @@ fn help(){
     println!(" RRRR   U   U  SSS    T   ");
     println!(" R  R   U   U     S   T   ");
     println!(" R   R  UUUUU  SSS    T   ");
+    println!();
     println!("usage: rusty_s3_ls [OPERATION] 🦀");
     println!();
     println!("OPERATION can be one of the following:");
